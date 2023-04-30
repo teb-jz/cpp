@@ -1,15 +1,3 @@
-<style>
-    body {
-
-        text-align: justify;
-    }
-
-    .caption {
-        margin-top:-15px;
-        text-align: right;
-        font-size: small;
-    }
-</style>
 
 # Spis treści
 1. [Wprowadzenie](#wprowadzenie)
@@ -47,7 +35,7 @@ int main () {
     return 0;
 }
 ```
-<p class = "caption">1.1. Podstawowy program</p>
+<p align = "right">1.1. Podstawowy program</p>
 
 # Zmienna
 
@@ -61,14 +49,14 @@ Tworząc zmienną trzeba nadać jej **typ** oraz **nazwę symboliczną**, przez 
 int a;
 int b;
 ```
-<p class = "caption">2.1. Deklaracja zmiennej</p>
+<p align = "right">2.1. Deklaracja zmiennej</p>
 
 Jeżeli kilka zmiennych ma posiadać ten sam typ, zapis można skrócić korzystając z przecinka.
 
 ```cpp
 int a, b;
 ```
-<p class = "caption">2.2. Deklaracja zmiennych</p>
+<p align = "right">2.2. Deklaracja zmiennych</p>
 
 # Podstawowe operatory
 
@@ -81,14 +69,14 @@ int number;
 
 number = 3;
 ```
-<p class = "caption">3.1. Przypisanie wartości</p>
+<p align = "right">3.1. Przypisanie wartości</p>
 
 W przypadku przypisania wartości zmiennej podczas jej deklarowania mowa o **inicjalizacji** zmiennej.
 
 ```cpp
 int number = 3;
 ```
-<p class = "caption">3.2. Inicjalizacja zmiennej</p>
+<p align = "right">3.2. Inicjalizacja zmiennej</p>
 
 ## Operatory arytmetyczne
 
@@ -110,7 +98,7 @@ i = i + 1;
 i += 1;
 i++;
 ```
-<p class = "caption">3.3. Nadpisanie wartości</p>
+<p align = "right">3.3. Nadpisanie wartości</p>
 
 Powyższe trzy zapisy są równoważne. Każda z linijek odpowiada za zwiększenie wartości zmiennej `i` o jeden. Adekwatnie dla pozostałych operatorów:
 
@@ -172,7 +160,7 @@ Znaki zapisujemy przy pomocy apostrofów `'`.
 char c1 = 'a';
 char c2 = 97;   // 'a'
 ```
-<p class = "caption">3.3. Zmienna znakowa</p>
+<p align = "right">3.3. Zmienna znakowa</p>
 
 ## Typ logiczny
 
@@ -185,7 +173,7 @@ bool b1 = true; // 1
 bool b2 = 3;    // 1
 bool b3 = -4;   // 1
 ```
-<p class = "caption">3.4. Typ logiczny</p>
+<p align = "right">3.4. Typ logiczny</p>
 
 Wszystkie zmienne posiadają wartość prawdziwą.
 
@@ -199,7 +187,7 @@ Czasami zachodzi konieczność **konwersji** pomiędzy danymi typami.
 float a = 9.84;
 int b = (int)a; // 9
 ```
-<p class = "caption">3.5. Rzutowanie typów</p>
+<p align = "right">3.5. Rzutowanie typów</p>
 
 **Rzutowanie** typów odbywa się poprzez poprzedzenie wartości nazwą pożądanego typu, zapisaną w nawiasach okrągłych.
 
@@ -208,7 +196,7 @@ int b = (int)a; // 9
 ```cpp
 const int x = 21;
 ```
-<p class = "caption">3.6. Deklaracja stałej</p>
+<p align = "right">3.6. Deklaracja stałej</p>
 
 Stała powinna zostać zainicjalizowana wartością podczas deklaracji.
 
@@ -221,7 +209,7 @@ Do wyświetlania danych na ekran oraz ich wprowadzania służą obiekty zdefinio
 ```cpp
 std::cout << "Hello world";
 ```
-<p class = "caption">4.1. Wyświetlanie tekstu</p>
+<p align = "right">4.1. Wyświetlanie tekstu</p>
 
 Tekst zapisujemy przy pomocy cudzysłowów `"`.
 
@@ -232,7 +220,7 @@ std::cout
     << "Suma liczb " << number << " i " << 3
     << " wynosi " << number + 3 << ".";
 ```
-<p class = "caption">4.2. Wyświetlanie danych</p>
+<p align = "right">4.2. Wyświetlanie danych</p>
 
 Poszczególne ciągi znaków, liczby, wartości zmiennych, czy wyrażenia możemy wypisywać po kolejnych znakach `<<`. Dla czytelności można rozbić zapis na kilka linii.
 
@@ -244,14 +232,14 @@ Przejście do nowej linii można zrealizować na dwa sposoby: `endl` lub `\n`.
 std::cout << "Przykładowy" << std::endl << "tekst";
 std::cout << "Przykładowy\ntekst";
 ```
-<p class = "caption">4.3. Znak końca linii</p>
+<p align = "right">4.3. Znak końca linii</p>
 
 Kolejnym przydatnym znakiem specjalnym jest tabulacja `\t`.
 
 ```cpp
 std::cout << "Przykładowy\ttekst";
 ```
-<p class = "caption">4.4. Znak tabulacji</p>
+<p align = "right">4.4. Znak tabulacji</p>
 
 ## Pobieranie danych
 
@@ -262,7 +250,7 @@ int number;
 
 std::cin >> number;
 ```
-<p class = "caption">4.5. Wczytywanie danych</p>
+<p align = "right">4.5. Wczytywanie danych</p>
 
 `cin` pozwala na wczytanie więcej wartości.
 
@@ -271,7 +259,7 @@ int a, b, c;
 
 std::cin >> a >> b >> c;
 ```
-<p class = "caption">4.6 Wczytywanie wielu danych</p>
+<p align = "right">4.6 Wczytywanie wielu danych</p>
 
 # Instrukcje warunkowe
 
@@ -285,7 +273,7 @@ if (flag) {
     std::cout << "Warunek spełniony";
 }
 ```
-<p class = "caption">5.1. Instrukcja warunkowa</p>
+<p align = "right">5.1. Instrukcja warunkowa</p>
 
 W przypadku, gdy w ciele instrukcji warunkowej znajduje się tylko jedna linia kodu, możemy pominąć klamry.
 
@@ -294,7 +282,7 @@ bool flag = true;
 
 if (flag) std::cout << "Warunek spełniony";
 ```
-<p class = "caption">5.2. Krótka instrukcja warunkowa</p>
+<p align = "right">5.2. Krótka instrukcja warunkowa</p>
 
 ## Operatory relacyjne
 
