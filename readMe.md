@@ -22,6 +22,11 @@
 6. [Instrukcje warunkowe](#instrukcje-warunkowe)
     - [Operatory relacyjne](#operatory-relacyjne)
     - [Operatory logiczne](#operatory-logiczne)
+7. [Pętle](#pętle)
+    - [Pętla for](#pętla-for)
+    - [Pętla while](#pętla-while)
+    - [Pętla do while](#pętla-do-while)
+    - [Instrukcja break](#instrukcja-break)
 
 # Wprowadzenie
 
@@ -303,3 +308,61 @@ W przypadku bardziej precyzyjnych zagadnień pomocne okazują się **warunki zł
 |`&&`|koniunkcja|*and*, *i*, *oraz* &ndash; oba warunki muszą być spełnione|
 |`\|\|`|alternatywa|*or*, *lub* &ndash; przynajmniej jeden z warunków musi być spełnony|
 |`!`|negacja|*not*, *zaprzeczenie* &ndash; odwrócenie wartości logicznej|
+
+# Pętle
+
+Pętle w programowaniu służą do cyklicznego wykonywania ciągu instrukcji określoną liczbę razy.
+
+> Każdy obrót pętli nazywamy iteracją.
+
+W języku C++ możemy wyróżnić trzy podstawowe typy pętli.
+
+## Pętla For
+
+```cpp
+for (int i = 0; i < 10; i++) {
+
+    std::cout << i << " ";
+}
+```
+
+## Pętla While
+
+```cpp
+int i = 0;
+
+while (i < 10) {
+
+    std::cout << i << " ";
+    i++;
+}
+```
+
+## Pętla Do While
+
+```cpp
+int i = 0;
+
+do {
+
+    std::cout << i << " ";
+    i++;
+
+} while (i < 10);
+```
+
+## Instrukcja Break
+
+Instrukcja break odpowiada za natychmiastowe przerwanie pętli, niezależnie od stanu warunku lub iteratora.
+
+```cpp
+int i = 0;
+
+while (i < 10) {
+
+    if (i > 5) break;
+
+    std::cout << i << " ";
+    i++;
+}
+```
