@@ -1,5 +1,6 @@
 
-# Spis treści
+# Spis treści<!-- omit in toc -->
+
 1. [Wprowadzenie](#wprowadzenie)
 2. [Zmienna](#zmienna)
     - [Deklaracja zmiennej](#deklaracja-zmiennej)
@@ -27,6 +28,9 @@
     - [Pętla while](#pętla-while)
     - [Pętla do while](#pętla-do-while)
     - [Instrukcja break](#instrukcja-break)
+8. [Tablice](#tablice)
+    - [Deklaracja i indeksowanie tablic](#deklaracja-i-indeksowanie-tablic)
+    - [Tablice wielowymiarowe](#tablice-wielowymiarowe)
 
 # Wprowadzenie
 
@@ -370,3 +374,38 @@ while (i < 10) {
 }
 ```
 <p align = "right">7.4. Instrukcja Break</p>
+
+# Tablice
+
+**Tablice** Można interpretować jako **uporządkowane zbiory pewnych elementów**.
+
+## Deklaracja i indeksowanie tablic
+
+W języku *cpp* tablicę definiujemy poprzez nawiasy kwadratowe. Wewnątrz nich wpisujemy liczbę oznaczającą rozmiar deklarowanej tablicy. Poprzedzone są typem elementów, jakie ma zawierać tablica, oraz jej nazwą.
+
+```cpp
+int arr [3];
+```
+<p align = "right">8.1. Deklaracja tablicy</p>
+
+Wartości możemy przypisywać odwołując się do konkretnego elementu tablicy poprzez jego indeks.
+
+```cpp
+arr[2] = 7;
+
+std::cout << arr[2];
+```
+<p align = "right">8.2. Odwołanie do elementu tablicy</p>
+
+> W informatyce przyjęło się indeksować elementy od zera, zatem pierwszy element ma indeks 0, drugi - 1 i tak dalej.
+
+## Tablice wielowymiarowe
+
+Inaczej **tablicy zagnieżdżone**, czyli tablice, których elementami są kolejne tablice.
+
+```cpp
+int arr [2][2];
+
+arr[0][1] = 7;
+```
+<p align = "right">8.3. Deklaracja tablic wielowymiarowych</p>
