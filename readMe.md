@@ -1,36 +1,40 @@
 
 # Spis treści<!-- omit in toc -->
 
-1. [Wprowadzenie](#wprowadzenie)
-2. [Zmienna](#zmienna)
-    - [Deklaracja zmiennej](#deklaracja-zmiennej)
-3. [Podstawowe operatory](#podstawowe-operatory)
-    - [Operator przypisania](#operator-przypisania)
-    - [Operatory arytmetyczne](#operatory-arytmetyczne)
-    - [Dodatkowe operatory przypisania](#dodatkowe-operatory-przypisania)
-4. [Typy danych](#typy-danych)
-    - [Typy liczbowe](#typy-liczbowe)
-        - [Całkowite](#całkowite)
-        - [Niecałkowite](#niecałkowite)
-    - [Typ znakowy](#typ-znakowy)
-    - [Typ logiczny](#typ-logiczny)
-    - [Rzutowanie typów](#rzutowanie-typów)
-    - [Stałe](#stałe)
-5. [Wprowadzanie i wyprowadzanie danych](#wprowadzanie-i-wyprowadzanie-danych)
-    - [Wyświetlanie danych](#wyświetlanie-danych)
-        - [Znaki specjalne](#znaki-specjalne)
-    - [Pobieranie danych](#pobieranie-danych)
-6. [Instrukcje warunkowe](#instrukcje-warunkowe)
-    - [Operatory relacyjne](#operatory-relacyjne)
-    - [Operatory logiczne](#operatory-logiczne)
-7. [Pętle](#pętle)
-    - [Pętla for](#pętla-for)
-    - [Pętla while](#pętla-while)
-    - [Pętla do while](#pętla-do-while)
-    - [Instrukcja break](#instrukcja-break)
-8. [Tablice](#tablice)
-    - [Deklaracja i indeksowanie tablic](#deklaracja-i-indeksowanie-tablic)
-    - [Tablice wielowymiarowe](#tablice-wielowymiarowe)
+- [Wprowadzenie](#wprowadzenie)
+- [Zmienna](#zmienna)
+  - [Deklaracja zmiennej](#deklaracja-zmiennej)
+- [Podstawowe operatory](#podstawowe-operatory)
+  - [Operator przypisania](#operator-przypisania)
+  - [Operatory arytmetyczne](#operatory-arytmetyczne)
+  - [Dodatkowe operatory przypisania](#dodatkowe-operatory-przypisania)
+- [Typy danych](#typy-danych)
+  - [Typy liczbowe](#typy-liczbowe)
+  - [Typ znakowy](#typ-znakowy)
+  - [Typ logiczny](#typ-logiczny)
+  - [Rzutowanie typów](#rzutowanie-typów)
+  - [Stałe](#stałe)
+- [Wprowadzanie i wyprowadzanie danych](#wprowadzanie-i-wyprowadzanie-danych)
+  - [Wyświetlanie danych](#wyświetlanie-danych)
+    - [Znaki specjalne](#znaki-specjalne)
+  - [Pobieranie danych](#pobieranie-danych)
+- [Instrukcje warunkowe](#instrukcje-warunkowe)
+  - [Operatory relacyjne](#operatory-relacyjne)
+  - [Operatory logiczne](#operatory-logiczne)
+- [Pętle](#pętle)
+  - [Pętla For](#pętla-for)
+  - [Pętla While](#pętla-while)
+  - [Pętla Do While](#pętla-do-while)
+  - [Instrukcja Break](#instrukcja-break)
+- [Tablice](#tablice)
+  - [Deklaracja i indeksowanie tablic](#deklaracja-i-indeksowanie-tablic)
+  - [Tablice wielowymiarowe](#tablice-wielowymiarowe)
+- [Funkcje](#funkcje)
+  - [Argumenty funkcji i zwracanie wartości](#argumenty-funkcji-i-zwracanie-wartości)
+- [Wskaźniki](#wskaźniki)
+  - [Przypisywanie adresu zmiennej i wartości](#przypisywanie-adresu-zmiennej-i-wartości)
+  - [Wskaźniki jako argumenty funkcji](#wskaźniki-jako-argumenty-funkcji)
+  - [Dynamiczne przydzielanie pamięci](#dynamiczne-przydzielanie-pamięci)
 
 # Wprowadzenie
 
@@ -409,3 +413,128 @@ int arr [2][2];
 arr[0][1] = 7;
 ```
 <p align = "right">8.3. Deklaracja tablic wielowymiarowych</p>
+
+# Funkcje
+
+Funkcja to wydzielony fragment kodu, który można używać wielokrotnie w różnych miejscach programu.
+
+Do tej pory mieliśmy styczność jedynie z funkcją `main`, ale jesteśmy w stanie definiować również własne funkcje.
+
+```cpp
+void f () {
+
+    std::cout << "Przykładowa funkcja";
+}
+```
+<p align = "right">9.1. Definicja przykładowej funkcji</p>
+
+Definicja funkcji składa się z typu danych zwracanych przez funkcję, nazwy, nawiasów okrągłych oraz klamer wyznaczających blok kodu z instrukcjami.
+
+> Typ `void` możemy interpretować jako brak typu. Wykorzystujemy go, jeżeli nasza funkcja ma niczego nie zwracać.
+
+Wywołanie funkcji odbywa się poprzez podanie jej nazwy.
+
+```cpp
+f();
+```
+<p align = "right">9.2. Wywołanie funkcji</p>
+
+## Argumenty funkcji i zwracanie wartości
+
+Tworzona przez nas funkcja może korzystać z wartości, jakie do niej przekażemy w formie argumentów.
+
+```cpp
+int sum (int a, int b) {
+
+    return a + b;
+}
+```
+<p align = "right">9.3. Funkcja dwu argumentowa</p>
+
+Argumenty podajemy w nawiasach okrągłych. W przypadku, gdy funkcja ma zwracać daną wartość należy wykorzystać słowo kluczowe `return`.
+
+```cpp
+int s;
+
+s = sum(3, 7);
+
+std::cout << s;
+```
+<p align = "right">9.4. Przekazanie parametrów</p>
+
+Przekazywane parametry podajemy w nawiasach okrągłych.
+
+# Wskaźniki
+
+Wskaźnik to typ zmiennej odpowiedzialnej za przechowywanie adresu do innej zmiennej w obrębie naszego programu.
+
+```cpp
+int * a;
+```
+<p align = "right">10.1. Tworzenie wskaźnika</p>
+
+Wskaźnik deklarujemy podobnie jak zwykłe zmienne, ale korzystając z dodatkowego znaku `*`.
+
+## Przypisywanie adresu zmiennej i wartości
+
+Operatorem odpowiedzialnym za pobranie adresu danej zmiennej jest `&`.
+
+```cpp
+int a;
+int * b;
+
+b = &a;
+```
+<p align = "right">10.2. Przypisanie adresu zmiennej</p>
+
+Aby przypisać wartość należy użyć nazwy zmiennej wraz z **operatorem wyłuskania** `*`. Tak samo postępujemy w sytuacji, gdy wartość tej zmiennej chcemy przypisać do innej zmiennej lub ją wyświetlić.
+
+```cpp
+int a;
+int * b;
+
+a = 2;
+
+b = &a;
+
+*b = 1;
+
+std::cout << a;
+```
+<p align = "right">10.3. Zmiana wartości</p>
+
+Za pomocą wskaźników można kontrolować wartości innych zmiennych.
+
+## Wskaźniki jako argumenty funkcji
+
+```cpp
+void f (int * x) {
+
+    *x = 3;
+}
+
+int main () {
+
+    int a;
+
+    f(&a);
+
+    std::cout << a;
+}
+```
+<p align = "right">10.4. Wskaźniki jako argumenty funkcji</p>
+
+Po przekazaniu adresów zmiennych do funkcji jesteśmy w stanie zarządzać ich wartościami.
+
+## Dynamiczne przydzielanie pamięci
+
+```cpp
+int * arr = new int [5];
+
+arr[0] = 7;
+
+delete [] arr;
+```
+<p align = "right">10.5. Dynamiczna deklaracja tablicy</p>
+
+Dzięki wskaźnikom jesteśmy w stanie przydzielić potrzebną nam pamięć dynamicznie, przy pomocy słowa kluczowego `new`. Należy jednak pamiętać o zwolnieniu tej pamięci, jeżeli nie mamy zamiaru już z niej korzystać. Tutaj pomocne okaże się słowo kluczowe `delete`.
